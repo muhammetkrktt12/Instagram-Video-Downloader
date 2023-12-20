@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#363636"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="0dp"
+        android:background="#F14668">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Insta Saver"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold">
+
+            </TextView>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/include"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_below="@id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="-3dp"
+        android:background="@drawable/bg"
+        app:tabIndicatorAnimationDuration="@android:integer/config_mediumAnimTime"
+        app:tabIndicatorAnimationMode="elastic"
+        app:tabIndicatorColor="@color/white"
+        app:tabIndicatorHeight="3.5dp"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/white">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Photo" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="video" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reel" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Igtv" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile Pic" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/fragmentcontainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/include">
+
+    </androidx.viewpager.widget.ViewPager>
+
+
+
+
+
+</RelativeLayout>
